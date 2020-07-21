@@ -1,0 +1,14 @@
+body {
+    background-color:  yellowgreen ;
+  }
+
+  h1,h2 {
+    color: rgb(76, 0, 255);
+  }
+  p {
+    
+    /* used to enable/disable italic style */
+    font-style: italic;
+    }
+    
+  
