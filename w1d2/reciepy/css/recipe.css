@@ -1,4 +1,4 @@
-h1{
+h1,h2,h4{
 color: #A4A400 ;
 background-color: #f0f0f0;
 font-family:Arial, Helvetica, sans-serif;
@@ -8,19 +8,16 @@ font-weight: bold;
 text-decoration-line: underline;
 }
 h2,h4{
-    color: #A4A400;
-    background-color: #F0F0F0 ;
-    font-family:Arial, Helvetica, sans-serif;
+    
     text-align: left;
     font-size:  18pt ;
-    font-weight: bold;
-    text-decoration-line: underline;
+    
 }
 body{
  background-color: white;
  color:#404040;
  font-size: 11pt;
- font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ font-family: Georgia, Times, 'Times New Roman', serif;
  background-image: url("silverware.jpg");
  background-attachment: fixed;
 
