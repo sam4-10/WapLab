@@ -43,3 +43,15 @@ a {
 .right{
     text-align: right;
 }
+
+span {
+    font-weight: bold;
+}
+#copyright {
+    text-align: left;
+}
+
+#copyright-details {
+    display: inline-block;
+    text-align: right;
+}
