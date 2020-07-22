@@ -1,0 +1,48 @@
+h1{
+color: #A4A400 ;
+background-color: #f0f0f0;
+font-family:Arial, Helvetica, sans-serif;
+text-align: center;
+font-size:  22pt ;
+font-weight: bold;
+text-decoration-line: underline;
+}
+h2,h3,h4{
+    color: #A4A400;
+    background-color: #F0F0F0 ;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-size:  18pt ;
+    font-weight: bold;
+    text-decoration-line: underline;
+}
+body{
+ background-color: white;
+ color:#404040;
+ font-size: 11pt;
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ background-image: url("silverware.jpg");
+ background-attachment: fixed;
+
+}
+.comments {
+    background-color: aqua;
+    font-size: 11pt;
+    position: relative;
+    left: 30px;
+    margin-right: 450px;
+}
+
+
+  ul{
+      list-style-image: url("pie_bullet.png");
+  }
+  
+
+a {
+    color: #A4A400;
+}
+  
+.right{
+    text-align: right;
+}
