@@ -47,11 +47,3 @@ a {
 span {
     font-weight: bold;
 }
-#copyright {
-    text-align: right;
-}
-
-#copyright-details {
-    display: inline-block;
-    text-align: right;
-}
