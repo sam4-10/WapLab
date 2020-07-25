@@ -7,32 +7,40 @@
     <title>Document</title>
 </head>
 <body>
-  <div class="master">
-  <div class="header">
-    <h1>Header</h1>
-  </div>
-  
-  <!-- Navigation Bar -->
-  <div class="menubar">
-    <a href="Menu1">Menu1</a>
-    <a href="Menu2">Menu2</a>
-    <a href="Menu3">Menu3</a>
-  </div>
-  
-  
-  <div class="row">
-      <div class="col1">Column1</div>
-      <div class="col2">Column2</div>
-      <div class="col3">Column3</div>  
-  </div>
-</div>
-  
-  
-  <!-- Footer -->
-  <div class="footer">
-    <h2>Footer</h2>
-  </div>
-        
-      
+  <style>
+    .container {
+        display: grid;
+        grid-template-columns: 120px 200px;
+        grid-gap: 5px;
+        max-width: 400px;;
+    }
+    .label {
+        padding-top: 5px;
+    }
+    input[type=text]{
+      font-family: monospace;
+    }
+</style>
+</head>
+
+<body>
+
+    <fieldset class="container">
+        <legend>Party Info</legend>
+        <div class="label">First Name:</div>
+        <div><input type="text" name="first Name" /></div>
+        <div class="label">Last Name:</div>
+        <div><input type="text" name="last Name" /></div>
+        <div class="label">Favorite Food:</div>
+        <div>
+            <select name="menu">
+                <option>Pizza</option>
+                <option>Ice Cream</option>
+                <option>Burger and Fries</option>
+            </select>
+        </div>
+    </fieldset>
+
 </body>
+
 </html>
