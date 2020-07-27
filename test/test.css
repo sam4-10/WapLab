@@ -1,0 +1,26 @@
+#container {
+    display: grid;
+    grid-template-areas: 
+    'some text text'
+    'some here there'
+}
+div {
+    min-height: 100px;
+}
+#some {
+    grid-area: some;
+    background-color: #CCC;
+}
+#text {
+    grid-area: text;
+    background-color: #BBB;
+}
+#here {
+    grid-area: here;
+    
+    background-color: #EEE;
+}
+#there {
+    grid-area: there;
+    background-color: #CCC;
+}

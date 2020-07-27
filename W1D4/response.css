@@ -44,6 +44,11 @@ background: rgb(78, 92, 92);
     line-height: 200px;
     font-size: 40px;
 }
+@media only screen and (max-width: 600px) {
+  .col2 {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 .col1 {
     background-color:  #999191f8;
     padding: 20px;
@@ -63,4 +68,6 @@ background: rgb(78, 92, 92);
     padding: 20px;
     text-align: center;
     background: rgb(78, 92, 92);
+  }
+ 
   }
