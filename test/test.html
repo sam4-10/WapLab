@@ -6,19 +6,57 @@
     <title>Document</title>
     <link rel="stylesheet" href="test.css">
 
-<head>
 
+</div>
+</body> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+<script>
+    // initialize mocha
+    mocha.setup('bdd');
+    // chai has a lot of stuff, let's make assert global
+    let assert = chai.assert;
+
+</script>
+
+<script>
+    // write your code for the function earliestSpace() here
+    // remember it has to take 3 strings, not an array!
+    function earliestSpace(string1,string2,string3){
+   
+   let lowestindexed = string1.indexOf(" ");
+   let result = string1;
+   if (string2.indexOf(" ") < lowestindexed) {
+      
+       lowestindexed = string2.indexOf(" ");
+       result = string2;
+   }
+   if (string3.indexOf(" ") < lowestindexed) {
+       lowestindexed = string3.indexOf(" ");
+       result = string3;
+   }
+   return result;
+
+
+}
+</script>
+<script>
+    describe("earliestSpace", function () {
+        it("takes 3 strings, and returns whicherver string has a space character at the lowest index",
+            function () {
+                assert.equal("bla bla bla", earliestSpace("This is a test", "Where it checks for spaces",
+                    "bla bla bla"));
+            });
+    });
+
+</script>
 </head>
 
 <body>
-<div id="container">
+<div id="mocha"></div>
+<script>
+    mocha.run();
 
-<div id="some">some</div>
-<div id="text">text</div>
-<div id="here">here</div>
-<div id="there">there</div>
-
-</div>
-</body>
+</script>
 
 </html>

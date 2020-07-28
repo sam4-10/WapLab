@@ -1,0 +1,15 @@
+#password, #email , #url{
+    width: 90%;
+    padding: 10px;
+}
+body {
+    padding: 10px;
+}
+#submit {
+    padding: 10px;
+    background-color: rgb(0, 110, 255);
+    color: white;
+}
+#labelemail {
+color: gray;
+}
