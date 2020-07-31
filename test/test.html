@@ -36,6 +36,19 @@
        result = string3;
    }
    return result;
+   
+  
+
+function makeSizer(size) { 
+    return function () { 
+        document.body.style.fontSize = size + "px"; 
+    }; } function makeSizerSimple(size)
+     { //can use this version with .bind() 
+        document.body.style.fontSize = size + "px";
+     }
+         document.getElementById("size-12").onclick = makeSizer(12); 
+     document.getElementById("size-16").onclick = makeSizer(16); 
+document.getElementById("size-18").onclick = makeSizerSimple.bind(null, 18);
 
 
 }
@@ -52,7 +65,12 @@
 </script>
 </head>
 
-<body>
+
+    <body>
+        <a href="#" id="size-12">Size 12</a>
+        <a href="#" id="size-16">Size 16</a>
+        <a href="#" id="size-18">Size 18</a>
+    </body>
 <div id="mocha"></div>
 <script>
     mocha.run();

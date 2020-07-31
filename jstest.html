@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    answer of js tests
+    <script>
+//         for (var i = 0; i < 10; i++) {
+//  console.log("i inside for loop: " + i);
+// }
+// console.log("i out side loop"+i); // 10
+// if (i > 5) {
+//  var j = 3;
+// }
+// console.log("j OUTside block: " + j + " " + i);
+
+// function a() {
+// console.log("a"+x); // consult Global for x and print 20 from Global
+// }
+// function b() {
+// var x = 10;
+// a(); // consult Global for a
+// }
+// var x = 20;
+// b();
+
+var x = 5;
+var y = 7;
+function a() {
+    function b() {
+        console.log(`1: x=${x} y=${y}`);
+        y = 10;
+        return function c(y) {
+            console.log(`2: x=${x} y=${y}`);
+        }
+    }
+    console.log(`3: x=${x} y=${y}`)
+    var z = b()
+    var x = 10;
+   // z(20);
+}
+console.log(`4: x=${x} y=${y}`);
+a();
+console.log(`5: x=${x} y=${y}`);
+
+//     function longestNoSpace(...strings) {
+//             return strings
+//                 .filter((str) => { return str.indexOf(" ") < 0 })
+//                 .map((str) => { return str.length })
+//                 .reduce( (acc, curr) => { return curr > acc ? curr : acc })
+//         }
+
+
+// console.log(longestNoSpace("this is","a test"));
+
+    </script>
+</body>
+</html>
