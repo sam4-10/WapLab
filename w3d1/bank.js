@@ -1,26 +1,25 @@
 class Bank{
+    static nextNumber=1;
     constructor(){
         this.account=[];
-        this.nextNumber=1;
+        
     }
-    
-
 
 
     addAccount(){
-        this.account.push(new Account(this.nextNumber));
-        return this.nextNumber++;
+        this.account.push(new Account(Bank.nextNumber));
+        return Bank.nextNumber++;
     } 
 
     addSavingsAccount(interest){
-        let save=new Savingsaccount(this.nextNumber);
+        let save=new Savingsaccount(Bank.nextNumber);
         save.deposit(1000);
        
         if(!interest){
             save.setInterest(interest);
         }
         this.account.push(save);
-        return this.nextNumber++;
+        return Bank.nextNumber++;
 
     }
 
@@ -32,13 +31,11 @@ class Bank{
             check.setOverdraft(overdraft);
         }
         this.account.push(check);
-        return this.nextNumber++;
+        return Bank.nextNumber++;
 
     }
 
     closeAccount(number){
-      //  this.account.splice(number, 1);
-      // could have used splice but it will remove the index and will affect change of account number of all subsequent accounts
         delete this.account[number];
         return number;
     }
