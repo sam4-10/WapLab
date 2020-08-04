@@ -1,7 +1,9 @@
-in start method:" this.timer = setInterval(() => this.render(), 1000);"
 
-setInterval accepts to parameters, fuction and time in millisecond. 
-since render is a method(not a function) in a class, we can not directly put in the function argument of the setInterval. So, 
-we put render() as a return inside anonymous function and solved.
 
-2. super constructor should be called by the derived class in the first line before intialization the derived class's own fields(first line after the constructor call)
+1. " this.timer = setInterval(() => this.render(), 1000);"
+    the main thing as far as i understood is when we call events we need a function that returns a function. one option is using closure. 
+    and the other way as i learned in this lesson is on how to use the class to call the event functions, 
+    by passing the wrapper function as in the setTimeout(() => button.click(), 1000).
+
+
+2. super constructor in derived class must be called and initialized within child class constructor before accessing 'this' or returning.
