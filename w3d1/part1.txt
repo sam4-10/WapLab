@@ -1,0 +1,7 @@
+in start method:" this.timer = setInterval(() => this.render(), 1000);"
+
+setInterval accepts to parameters, fuction and time in millisecond. 
+since render is a method(not a function) in a class, we can not directly put in the function argument of the setInterval. So, 
+we put render() as a return inside anonymous function and solved.
+
+2. super constructor should be called by the derived class in the first line before intialization the derived class's own fields(first line after the constructor call)

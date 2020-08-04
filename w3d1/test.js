@@ -23,16 +23,9 @@ describe("Account Test", function(){
         
 });
 
-
-
-
-
-
-
-
 describe("Saving Account Test", function(){
 
-    let saving=new Savingsaccount(2);
+    let saving = new Savingsaccount(2);
 
     it("Testing getInterest of SavingAccount", function(){
         assert.equal(5, saving.getInterest());
