@@ -13,15 +13,15 @@ $(function(){
  
         let num=$('#number').val();
  
-        $('.circle').show().css({"height":width,"width":width,"top":"200px","left":"50%"});
+        $('.circle').show().css({"height":width,"width":width,"top":"3px","left":"50%"});
  
-        let count=parseInt($('#number').val());
+        let count=parseInt(num);
  
-        for(let i=0;i<count;i++){
-            var $newCircle = $('<div />').appendTo('body');
+        for(let i=0; i < count;i++){
+            var $newCircle = $('<div>').appendTo('body');
             $newCircle.addClass("circle");
-            let col="rgb("+Math.floor(Math.random() * 255)+","+Math.floor(Math.random() * 255)+","+Math.floor(Math.random() * 255) +")";
-            $newCircle.css("background-color",col);
+            let multicolrs="rgb("+Math.floor(Math.random() * 255)+","+Math.floor(Math.random() * 255)+","+Math.floor(Math.random() * 255) +")";
+            $newCircle.css("background-color",multicolrs);
             $newCircle.click(hide);
             $newCircle.mouseenter(changeOpacity);
             $newCircle.mouseleave(resetOpacity);
@@ -32,84 +32,44 @@ $(function(){
 
  
         timerId=setInterval(grow,$('#rate').val());
-
-
-
- 
     }
-    function grow(evt){
+    function grow(){
         let growAmt=parseInt($('#growAmt').val());
- 
         let circle=$('.circle');
-
-
-
- 
         let newDiameter=parseInt(circle.height())+growAmt+"px";
-        let newLeft=parseInt(circle.css("left"))-growAmt/2+"px";
-        let newTop=parseInt(circle.css("top"))-growAmt/2+"px";
- 
         $(circle).css("width",newDiameter);
         $(circle).css("height",newDiameter);
-        //$(circle).css("top",newTop);
-        //$(circle).css("left",newLeft);
-
-
+        
  
     }
  
-    // $('.circle').click(function(evt){$(this).hide();});
-    $('.circle').click(hide);
- 
-    function hide(evt){
-        //alert('hiding');
+    function hide(){
         $(this).css("visibility","hidden");
-        //$(this).hide();
-
-
  
     }
  
-    let timerForOpacity;
-    function changeOpacity(evt) {
+    function changeOpacity() {
  
         timerForOpacity=setInterval((evt)=>{
             let currentOpacity=parseFloat($(this).css("opacity"));
- 
-        //alert(currentOpacity);
- 
+
         let next=currentOpacity-0.1;
-        //let next=Number(currentOpacity).toFixed(2) - Number(0.01).toFixed(2);
-        //alert(Number(currentOpacity).toFixed(2));
- 
+   
         $(this).css("opacity",next);
  
-    }
-
-
-
-
-
-
-
-
+    } ,200);
+ }
  
-    ,200);
-
-
- 
-    }
- 
-    function resetOpacity(evt){
+    function resetOpacity(){
         let t1=timerForOpacity;
  
         clearInterval(t1);
         $(this).css("opacity","1");
- 
     }
 
-
-
+    // $(".circle").hover(function(){
+    //     $(this).css("background-color", "pink");
+    //   });
 
 
  
